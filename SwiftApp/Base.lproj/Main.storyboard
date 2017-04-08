@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -29,24 +29,38 @@
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PbS-TW-8rN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0n-6m-uTK">
-                                <state key="normal" title="THE SECOND BUTTON"/>
-                                <connections>
-                                    <action selector="secondButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u8R-WZ-Y1y"/>
-                                </connections>
-                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WPu-gl-DFM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8F6-rG-l4L"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-hU-kQf">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="cTY-ji-Mcy"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="L0n-6m-uTK" firstAttribute="top" secondItem="sCp-gz-XiG" secondAttribute="bottom" constant="15" id="0vQ-mm-Em8"/>
+                            <constraint firstItem="WPu-gl-DFM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4ZI-fC-KFM"/>
+                            <constraint firstItem="iOb-hU-kQf" firstAttribute="top" secondItem="WPu-gl-DFM" secondAttribute="bottom" constant="28" id="8SF-Rf-1hF"/>
                             <constraint firstItem="sCp-gz-XiG" firstAttribute="top" secondItem="SfE-G8-SOF" secondAttribute="bottom" constant="9.5" id="H6j-BV-q5J"/>
+                            <constraint firstItem="WPu-gl-DFM" firstAttribute="top" secondItem="sCp-gz-XiG" secondAttribute="bottom" constant="23" id="JVH-qy-uFf"/>
                             <constraint firstItem="SfE-G8-SOF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="Mm5-oB-0oM"/>
                             <constraint firstItem="sCp-gz-XiG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="X2I-ir-oUI"/>
-                            <constraint firstItem="L0n-6m-uTK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pHI-H9-GOA"/>
+                            <constraint firstItem="iOb-hU-kQf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="k5m-sR-u0y"/>
                             <constraint firstItem="SfE-G8-SOF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhv-6Q-9wQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textOne" destination="WPu-gl-DFM" id="DJG-TZ-bgd"/>
+                        <outlet property="textTwo" destination="iOb-hU-kQf" id="qr9-mB-JDB"/>
                         <outlet property="theLabel" destination="SfE-G8-SOF" id="uFZ-u3-h8U"/>
                     </connections>
                 </viewController>
